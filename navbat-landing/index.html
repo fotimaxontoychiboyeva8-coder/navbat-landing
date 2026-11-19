@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Navbat — mijozlar navbatini onlayn boshqaring</title>
+<meta name="description" content="Navbat — sartaroshxona, klinika va xizmat ko‘rsatish joylari uchun onlayn navbat va yozilish tizimi.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%2312203A'/><text x='50' y='68' font-size='56' text-anchor='middle' fill='%23FFC93C' font-family='Arial' font-weight='700'>N</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top">
+  <a class="logo" href="#top" aria-label="Navbat — bosh sahifa"><span class="logo-mark">N</span>Navbat</a>
+  <nav aria-label="Asosiy menyu">
+    <a href="#imkoniyatlar">Imkoniyatlar</a>
+    <a href="#tariflar">Tariflar</a>
+    <a href="#savollar">Savollar</a>
+  </nav>
+  <a class="btn btn-small" href="#obuna">Boshlash</a>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Mijozlaringiz navbatda turmasin. Telefonda kutsin.</h1>
+      <p class="lead">Navbat mijozga vaqt va tartib raqamini beradi, xodimga esa bugungi ishni bir ekranda ko‘rsatadi. Sartaroshxona, klinika va ustaxonalar uchun.</p>
+      <div class="hero-actions">
+        <a class="btn" href="#obuna">14 kun bepul sinash</a>
+        <a class="btn btn-ghost" href="#tariflar">Tariflarni ko‘rish</a>
+      </div>
+      <p class="fine">Karta talab qilinmaydi. Istalgan vaqtda bekor qilish mumkin.</p>
+    </div>
+
+    <div class="board" aria-label="Navbat tizimi namunasi">
+      <div class="board-head">
+        <span>Hozir xizmatda</span>
+        <span class="live" aria-hidden="true">jonli</span>
+      </div>
+      <div class="now" id="now" aria-live="polite">A-24</div>
+      <p class="now-meta" id="nowMeta">Sartaroshxona · 2-kreslo</p>
+      <ol class="queue" id="queue"></ol>
+      <button class="btn btn-board" id="nextBtn" type="button">Keyingi mijozni chaqirish</button>
+    </div>
+  </section>
+
+  <section class="features" id="imkoniyatlar">
+    <h2>Kundalik ishni yengillashtiradigan to‘rt narsa</h2>
+    <div class="feature-list">
+      <article class="feature">
+        <h3>Onlayn yozilish</h3>
+        <p>Mijoz havola yoki QR-kod orqali xizmat va vaqtni tanlaydi. Qo‘ng‘iroq qilish shart emas.</p>
+      </article>
+      <article class="feature">
+        <h3>Eslatma xabarlari</h3>
+        <p>Navbatga 15 daqiqa qolganda mijozga Telegram yoki SMS yuboriladi. Kelmay qolganlar soni kamayadi.</p>
+      </article>
+      <article class="feature">
+        <h3>Xodimlar jadvali</h3>
+        <p>Har bir usta yoki shifokor uchun alohida jadval: ish vaqti, tanaffus va dam olish kunlari.</p>
+      </article>
+      <article class="feature">
+        <h3>Oylik hisobot</h3>
+        <p>Qancha mijoz kelgani, qaysi xizmat ko‘p so‘ralgani va eng band soatlar — jadval ko‘rinishida.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="pricing" id="tariflar">
+    <div class="pricing-head">
+      <h2>Tariflar</h2>
+      <div class="toggle" role="group" aria-label="To‘lov davri">
+        <button type="button" class="on" data-period="month" aria-pressed="true">Oylik</button>
+        <button type="button" data-period="year" aria-pressed="false">Yillik <small>−20%</small></button>
+      </div>
+    </div>
+
+    <div class="plans">
+      <article class="plan">
+        <h3>Boshlang‘ich</h3>
+        <p class="plan-for">Yakka usta yoki kichik joy uchun</p>
+        <p class="price"><span class="amount" data-month="0" data-year="0">0</span> <span class="unit">soʻm</span></p>
+        <ul>
+          <li>1 ta xodim</li>
+          <li>Oyiga 50 tagacha yozilish</li>
+          <li>Onlayn yozilish havolasi</li>
+        </ul>
+        <a class="btn btn-ghost" href="#obuna" data-plan="Boshlang‘ich">Bepul boshlash</a>
+      </article>
+
+      <article class="plan plan-main">
+        <p class="badge">Ko‘pchilik tanlaydi</p>
+        <h3>Biznes</h3>
+        <p class="plan-for">3–10 xodimli joylar uchun</p>
+        <p class="price"><span class="amount" data-month="99000" data-year="79000">99 000</span> <span class="unit">soʻm / oy</span></p>
+        <ul>
+          <li>10 tagacha xodim</li>
+          <li>Cheksiz yozilish</li>
+          <li>Telegram va SMS eslatmalar</li>
+          <li>Oylik hisobot</li>
+        </ul>
+        <a class="btn" href="#obuna" data-plan="Biznes">Biznesni tanlash</a>
+      </article>
+
+      <article class="plan">
+        <h3>Tarmoq</h3>
+        <p class="plan-for">Bir nechta filial uchun</p>
+        <p class="price"><span class="amount" data-month="249000" data-year="199000">249 000</span> <span class="unit">soʻm / oy</span></p>
+        <ul>
+          <li>Cheksiz xodim va filial</li>
+          <li>Barcha Biznes imkoniyatlari</li>
+          <li>Filiallar bo‘yicha umumiy hisobot</li>
+          <li>Shaxsiy menejer</li>
+        </ul>
+        <a class="btn btn-ghost" href="#obuna" data-plan="Tarmoq">Tarmoqni tanlash</a>
+      </article>
+    </div>
+    <p class="fine" id="billNote">Narxlar oylik to‘lov uchun ko‘rsatilgan.</p>
+  </section>
+
+  <section class="faq" id="savollar">
+    <h2>Ko‘p beriladigan savollar</h2>
+    <details>
+      <summary>Mijoz ilova o‘rnatishi kerakmi?</summary>
+      <p>Yo‘q. Mijoz havolani brauzerda ochadi yoki QR-kodni skanerlaydi, xolos.</p>
+    </details>
+    <details>
+      <summary>Sinov muddati tugagach nima bo‘ladi?</summary>
+      <p>Hisobingiz Boshlang‘ich tarifga o‘tadi. Ma’lumotlaringiz saqlanib qoladi, to‘lov olinmaydi.</p>
+    </details>
+    <details>
+      <summary>Tarifni keyin o‘zgartirsam bo‘ladimi?</summary>
+      <p>Ha, istalgan vaqtda yuqori yoki past tarifga o‘tishingiz mumkin.</p>
+    </details>
+  </section>
+
+  <section class="signup" id="obuna">
+    <div class="signup-text">
+      <h2>14 kunlik sinovni boshlang</h2>
+      <p>Ma’lumotlaringizni qoldiring. Biz sizga kirish havolasini yuboramiz.</p>
+    </div>
+    <form id="subForm" novalidate>
+      <label for="name">Ismingiz</label>
+      <input id="name" name="name" type="text" autocomplete="name" required placeholder="Masalan, Dilshod">
+      <p class="err" data-for="name"></p>
+
+      <label for="contact">Email yoki telefon</label>
+      <input id="contact" name="contact" type="text" autocomplete="email" required placeholder="nom@pochta.uz yoki +998 90 123 45 67">
+      <p class="err" data-for="contact"></p>
+
+      <label for="plan">Tarif</label>
+      <select id="plan" name="plan">
+        <option>Boshlang‘ich</option>
+        <option selected>Biznes</option>
+        <option>Tarmoq</option>
+      </select>
+
+      <label class="check"><input type="checkbox" id="agree" required> Ma’lumotlarimni qayta ishlashga roziman</label>
+      <p class="err" data-for="agree"></p>
+
+      <button class="btn btn-wide" type="submit">Obuna bo‘lish</button>
+      <p class="ok" id="ok" role="status" hidden></p>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <span class="logo"><span class="logo-mark">N</span>Navbat</span>
+  <span>© 2026 Navbat. Barcha huquqlar himoyalangan.</span>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
